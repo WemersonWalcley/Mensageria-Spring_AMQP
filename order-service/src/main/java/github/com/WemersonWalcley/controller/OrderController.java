@@ -1,10 +1,12 @@
 package github.com.WemersonWalcley.controller;
 
+import github.com.WemersonWalcley.DTO.OrderCreatedEventDTO;
 import github.com.WemersonWalcley.entity.Order;
 import github.com.WemersonWalcley.repository.OrderRepository;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -23,8 +25,9 @@ public class OrderController {
     public Order create(@RequestBody Order order) {
         orders.save(order);
         String routineKey = "orders.v1.order-created";
-        Message message = new Message(order.getId().toString().getBytes());
-        rabbitTemplate.send(routineKey, message);
+
+        OrderCreatedEventDTO event = new OrderCreatedEventDTO(order.getId(), order.getValue());
+        rabbitTemplate.convertAndSend(routineKey, event);
         return order;
     }
 

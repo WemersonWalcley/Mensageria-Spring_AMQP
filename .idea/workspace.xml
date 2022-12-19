@@ -7,6 +7,7 @@
     <list default="true" id="60ae67af-3c6a-4c5e-8900-09c73e8b1461" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cashback-service/src/main/java/github/com/WemersonWalcley/OrderCreatedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/cashback-service/src/main/java/github/com/WemersonWalcley/OrderCreatedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/github/com/WemersonWalcley/configuration/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/github/com/WemersonWalcley/configuration/RabbitMQConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/github/com/WemersonWalcley/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/github/com/WemersonWalcley/controller/OrderController.java" afterDir="false" />
     </list>
@@ -63,12 +64,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/cashback-service/src/main/java/github/com/WemersonWalcley" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/notification-service/src/main/java/github/com/WemersonWalcley" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Estudos\Java - Projects\Mensageria - Spring AMQP\notification-service\src\main\java\github\com\WemersonWalcley" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="github.com.WemersonWalcley.DTO" />
     </key>
@@ -77,6 +81,19 @@
     <configuration name="CashbackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="github.com.WemersonWalcley.CashbackApplication" />
       <module name="demo (2)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="github.com.WemersonWalcley.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="github.com.WemersonWalcley.NotificationServiceApplication" />
+      <module name="demo (1)" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="github.com.WemersonWalcley.*" />
@@ -103,6 +120,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CashbackApplication" />
+        <item itemvalue="Application.NotificationServiceApplication" />
         <item itemvalue="Application.OrderApplication" />
       </list>
     </recent_temporary>

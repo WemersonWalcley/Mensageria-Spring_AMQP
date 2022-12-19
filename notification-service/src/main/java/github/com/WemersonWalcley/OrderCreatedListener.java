@@ -6,8 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OrderCreatedListener {
-
-    @RabbitListener(queues = "orders.v1.order-created.generate-cashback")
+    @RabbitListener(queues = "orders.v1.order-created.send-notification")
     public void onOrderCreated(OrderCreatedEventDTO event){
         System.out.println("------------------------------------");
         System.out.println("Message ID: " + event.getId());

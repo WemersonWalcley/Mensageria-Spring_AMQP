@@ -2,6 +2,8 @@ package github.com.WemersonWalcley.controller;
 
 import github.com.WemersonWalcley.entity.Order;
 import github.com.WemersonWalcley.repository.OrderRepository;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +12,19 @@ import java.util.Collection;
 @RestController
 @RequestMapping(value = "/v1/orders")
 public class OrderController {
-    
+
     @Autowired
     private OrderRepository orders;
+
+    @Autowired
+    RabbitTemplate rabbitTemplate;
 
     @PostMapping
     public Order create(@RequestBody Order order) {
         orders.save(order);
+        String routineKey = "orders.v1.order-created";
+        Message message = new Message(order.getId().toString().getBytes());
+        rabbitTemplate.send(routineKey, message);
         return order;
     }
 
